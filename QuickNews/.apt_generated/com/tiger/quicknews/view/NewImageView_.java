@@ -69,8 +69,8 @@ public final class NewImageView_
     @Override
     public void onViewChanged(HasViews hasViews) {
         currentPage = ((TextView) hasViews.findViewById(id.current_page));
-        progressButton = ((ProgressButton) hasViews.findViewById(id.progressButton));
         currentImage = ((ImageView) hasViews.findViewById(id.current_image));
+        progressButton = ((ProgressButton) hasViews.findViewById(id.progressButton));
         initView();
     }
 
