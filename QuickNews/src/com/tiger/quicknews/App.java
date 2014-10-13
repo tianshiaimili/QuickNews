@@ -16,6 +16,8 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.tiger.quicknews.db.SQLHelper;
+import com.tiger.quicknews.utils.LogUtils;
+import com.tiger.quicknews.utils.LogUtils2;
 
 import org.androidannotations.annotations.EApplication;
 
@@ -55,7 +57,8 @@ public class App extends Application {
 
     /** 初始化ImageLoader */
     public static void initImageLoader(Context context) {
-        String filePath = Environment.getExternalStorageDirectory() +
+    	LogUtils2.e("initImageLoader------------");
+    	String filePath = Environment.getExternalStorageDirectory() +
                 "/Android/data/" + context.getPackageName() + "/cache/";
 
         File cacheDir = StorageUtils.getOwnCacheDirectory(context, filePath);// 获取到缓存的目录地址
