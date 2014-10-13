@@ -19,6 +19,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.tiger.quicknews.App;
 import com.tiger.quicknews.R;
 import com.tiger.quicknews.adapter.DragAdapter;
@@ -30,6 +31,8 @@ import com.tiger.quicknews.wedget.OtherGridView;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
+
+import org.androidannotations.annotations.EActivity;
 
 /**
  * 频道管理

@@ -92,8 +92,8 @@ public final class MessageActivity_
     public void onViewChanged(HasViews hasViews) {
         mTitle = ((TextView) hasViews.findViewById(com.tiger.quicknews.R.id.title));
         mListView = ((SwipeListView) hasViews.findViewById(com.tiger.quicknews.R.id.listview));
-        swipeLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.tiger.quicknews.R.id.swipe_container));
         mProgressBar = ((ProgressBar) hasViews.findViewById(com.tiger.quicknews.R.id.progressBar));
+        swipeLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.tiger.quicknews.R.id.swipe_container));
         {
             AdapterView<?> view = ((AdapterView<?> ) hasViews.findViewById(com.tiger.quicknews.R.id.listview));
             if (view!= null) {

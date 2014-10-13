@@ -9,22 +9,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import com.tiger.quicknews.R.id;
-import com.tiger.quicknews.R.layout;
 import org.androidannotations.api.SdkVersionHelper;
 import org.androidannotations.api.view.HasViews;
-import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
 
-public final class VideoActivity_
-    extends VideoActivity
-    implements HasViews, OnViewChangedListener
+public final class BaseActivity_
+    extends BaseActivity
+    implements HasViews
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
@@ -35,12 +29,9 @@ public final class VideoActivity_
         init_(savedInstanceState);
         super.onCreate(savedInstanceState);
         OnViewChangedNotifier.replaceNotifier(previousNotifier);
-        setContentView(layout.activity_video);
     }
 
     private void init_(Bundle savedInstanceState) {
-        OnViewChangedNotifier.registerOnViewChangedListener(this);
-        init();
     }
 
     @Override
@@ -61,16 +52,16 @@ public final class VideoActivity_
         onViewChangedNotifier_.notifyViewChanged(this);
     }
 
-    public static VideoActivity_.IntentBuilder_ intent(Context context) {
-        return new VideoActivity_.IntentBuilder_(context);
+    public static BaseActivity_.IntentBuilder_ intent(Context context) {
+        return new BaseActivity_.IntentBuilder_(context);
     }
 
-    public static VideoActivity_.IntentBuilder_ intent(android.app.Fragment fragment) {
-        return new VideoActivity_.IntentBuilder_(fragment);
+    public static BaseActivity_.IntentBuilder_ intent(android.app.Fragment fragment) {
+        return new BaseActivity_.IntentBuilder_(fragment);
     }
 
-    public static VideoActivity_.IntentBuilder_ intent(android.support.v4.app.Fragment supportFragment) {
-        return new VideoActivity_.IntentBuilder_(supportFragment);
+    public static BaseActivity_.IntentBuilder_ intent(android.support.v4.app.Fragment supportFragment) {
+        return new BaseActivity_.IntentBuilder_(supportFragment);
     }
 
     @Override
@@ -79,18 +70,6 @@ public final class VideoActivity_
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
-    }
-
-    @Override
-    public void onViewChanged(HasViews hasViews) {
-        mTitle = ((TextView) hasViews.findViewById(id.title));
-        mJingPin = ((RadioButton) hasViews.findViewById(id.video_jingpin));
-        mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
-        mGaoXiao = ((RadioButton) hasViews.findViewById(id.video_gaoxiao));
-        mYuLe = ((RadioButton) hasViews.findViewById(id.video_yule));
-        mReDian = ((RadioButton) hasViews.findViewById(id.video_redian));
-        mMeiTu = ((RadioButton) hasViews.findViewById(id.meitu));
-        initView();
     }
 
     public static class IntentBuilder_ {
@@ -102,26 +81,26 @@ public final class VideoActivity_
 
         public IntentBuilder_(Context context) {
             context_ = context;
-            intent_ = new Intent(context, VideoActivity_.class);
+            intent_ = new Intent(context, BaseActivity_.class);
         }
 
         public IntentBuilder_(android.app.Fragment fragment) {
             fragment_ = fragment;
             context_ = fragment.getActivity();
-            intent_ = new Intent(context_, VideoActivity_.class);
+            intent_ = new Intent(context_, BaseActivity_.class);
         }
 
         public IntentBuilder_(android.support.v4.app.Fragment fragment) {
             fragmentSupport_ = fragment;
             context_ = fragment.getActivity();
-            intent_ = new Intent(context_, VideoActivity_.class);
+            intent_ = new Intent(context_, BaseActivity_.class);
         }
 
         public Intent get() {
             return intent_;
         }
 
-        public VideoActivity_.IntentBuilder_ flags(int flags) {
+        public BaseActivity_.IntentBuilder_ flags(int flags) {
             intent_.setFlags(flags);
             return this;
         }

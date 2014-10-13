@@ -92,16 +92,16 @@ public final class WeatherActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mLocal = ((TextView) hasViews.findViewById(id.local));
-        mWeek = ((TextView) hasViews.findViewById(id.week));
-        mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
-        mWeatherDate = ((TextView) hasViews.findViewById(id.weather_date));
-        mWeatherTemp = ((TextView) hasViews.findViewById(id.weatherTemp));
-        mWeather = ((TextView) hasViews.findViewById(id.weather));
-        mWeatherImage = ((ImageView) hasViews.findViewById(id.weatherImage));
-        mTitle = ((TextView) hasViews.findViewById(id.title));
-        mLayout = ((RelativeLayout) hasViews.findViewById(id.layout));
         mWind = ((TextView) hasViews.findViewById(id.wind));
+        mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
+        mLayout = ((RelativeLayout) hasViews.findViewById(id.layout));
+        mWeather = ((TextView) hasViews.findViewById(id.weather));
+        mWeatherDate = ((TextView) hasViews.findViewById(id.weather_date));
+        mTitle = ((TextView) hasViews.findViewById(id.title));
+        mWeek = ((TextView) hasViews.findViewById(id.week));
+        mWeatherTemp = ((TextView) hasViews.findViewById(id.weatherTemp));
+        mWeatherImage = ((ImageView) hasViews.findViewById(id.weatherImage));
+        mLocal = ((TextView) hasViews.findViewById(id.local));
         {
             View view = hasViews.findViewById(id.local);
             if (view!= null) {

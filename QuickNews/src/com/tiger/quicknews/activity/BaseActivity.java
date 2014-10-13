@@ -1,6 +1,8 @@
 
 package com.tiger.quicknews.activity;
 
+import org.androidannotations.annotations.EActivity;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +24,7 @@ import com.tiger.quicknews.wedget.crouton.Style;
 import com.tiger.quicknews.wedget.gesture.BaseActivityHelper;
 import com.tiger.quicknews.wedget.slideingactivity.IntentUtils;
 import com.tiger.quicknews.wedget.slideingactivity.SlidingActivity;
-
+@EActivity
 public class BaseActivity extends SlidingActivity {
 
     /** 手势监听 */
