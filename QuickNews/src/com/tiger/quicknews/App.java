@@ -53,6 +53,7 @@ public class App extends Application {
             sqlHelper.close();
         super.onTerminate();
         // 整体摧毁的时候调用这个方法
+        LogUtils2.e("啦啦啦啦啦德玛西亚拉拉");
     }
 
     /** 初始化ImageLoader */
