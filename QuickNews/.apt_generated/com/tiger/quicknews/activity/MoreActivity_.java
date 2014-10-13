@@ -82,8 +82,8 @@ public final class MoreActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mProgressBar = ((ProgressBar) hasViews.findViewById(id.update_progress));
         mTitle = ((TextView) hasViews.findViewById(id.title));
+        mProgressBar = ((ProgressBar) hasViews.findViewById(id.update_progress));
         mTextViewNewest = ((TextView) hasViews.findViewById(id.newest));
         {
             View view = hasViews.findViewById(id.restart);

@@ -47,8 +47,8 @@ public final class WeatherActivity_
 
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
-        mWeatherAdapter2 = WeatherAdapter_.getInstance_(this);
         mWeatherAdapter1 = WeatherAdapter_.getInstance_(this);
+        mWeatherAdapter2 = WeatherAdapter_.getInstance_(this);
         init();
     }
 
@@ -92,16 +92,16 @@ public final class WeatherActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mWind = ((TextView) hasViews.findViewById(id.wind));
-        mWeek = ((TextView) hasViews.findViewById(id.week));
-        mWeatherDate = ((TextView) hasViews.findViewById(id.weather_date));
-        mWeatherImage = ((ImageView) hasViews.findViewById(id.weatherImage));
-        mWeatherTemp = ((TextView) hasViews.findViewById(id.weatherTemp));
-        mWeather = ((TextView) hasViews.findViewById(id.weather));
-        mLocal = ((TextView) hasViews.findViewById(id.local));
-        mTitle = ((TextView) hasViews.findViewById(id.title));
-        mLayout = ((RelativeLayout) hasViews.findViewById(id.layout));
         mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
+        mWeatherImage = ((ImageView) hasViews.findViewById(id.weatherImage));
+        mLocal = ((TextView) hasViews.findViewById(id.local));
+        mWeatherTemp = ((TextView) hasViews.findViewById(id.weatherTemp));
+        mTitle = ((TextView) hasViews.findViewById(id.title));
+        mWeatherDate = ((TextView) hasViews.findViewById(id.weather_date));
+        mWind = ((TextView) hasViews.findViewById(id.wind));
+        mLayout = ((RelativeLayout) hasViews.findViewById(id.layout));
+        mWeek = ((TextView) hasViews.findViewById(id.week));
+        mWeather = ((TextView) hasViews.findViewById(id.weather));
         {
             View view = hasViews.findViewById(id.local);
             if (view!= null) {
