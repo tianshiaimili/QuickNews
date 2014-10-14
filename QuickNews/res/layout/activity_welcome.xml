@@ -25,7 +25,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="#007788"
+            android:background="#59FFFF"
             discrollve:discrollve_alpha="true"
             discrollve:discrollve_threshold="0.3" />
 

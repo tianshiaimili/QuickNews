@@ -14,7 +14,11 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Fullscreen;
 import org.androidannotations.annotations.ViewById;
-
+/**
+ * 第一次进来欢迎页
+ * @author zero
+ *
+ */
 @Fullscreen
 @EActivity(R.layout.activity_welcome)
 public class WelcomeActivity extends BaseActivity {

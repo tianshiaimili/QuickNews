@@ -68,10 +68,10 @@ public final class PhotoDetailView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        photoContent = ((TextView) hasViews.findViewById(id.photo_content));
         currentImage = ((ImageView) hasViews.findViewById(id.current_image));
-        progressButton = ((ProgressButton) hasViews.findViewById(id.progressButton));
+        photoContent = ((TextView) hasViews.findViewById(id.photo_content));
         photoCount = ((TextView) hasViews.findViewById(id.photo_count));
+        progressButton = ((ProgressButton) hasViews.findViewById(id.progressButton));
         photoTitle = ((TextView) hasViews.findViewById(id.photo_title));
         initView();
     }

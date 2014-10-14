@@ -83,9 +83,9 @@ public final class TuPianSinaActivity_
     @Override
     public void onViewChanged(HasViews hasViews) {
         mJingXuan = ((RadioButton) hasViews.findViewById(id.redian));
-        mGuShi = ((RadioButton) hasViews.findViewById(id.titan));
         mMeiTu = ((RadioButton) hasViews.findViewById(id.mingxing));
         mQuTu = ((RadioButton) hasViews.findViewById(id.dujia));
+        mGuShi = ((RadioButton) hasViews.findViewById(id.titan));
         mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
         initView();
     }

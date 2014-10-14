@@ -1,5 +1,4 @@
 /**
- * Copyright (c) 2012-2013, Michael Yang 杨福�?(www.yangfuhai.com).
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,10 +45,6 @@ import android.graphics.Canvas;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-
-/**
- * @author Michael Yang（www.yangfuhai.com�?update at 2013.08.07
- */
 public class ACache {
 	public static final int TIME_HOUR = 60 * 60;
 	public static final int TIME_DAY = TIME_HOUR * 24;
@@ -85,6 +80,10 @@ public class ACache {
 		return manager;
 	}
 
+	/**
+	 * 获取当前进程的id android.os.Process.myPid()
+	 * @return
+	 */
 	private static String myPid() {
 		return "_" + android.os.Process.myPid();
 	}
@@ -562,7 +561,6 @@ public class ACache {
 
 	/**
 	 * @title 缓存管理�?
-	 * @author 杨福海（michael�?www.yangfuhai.com
 	 * @version 1.0
 	 */
 	public class ACacheManager {

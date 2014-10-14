@@ -68,14 +68,14 @@ public final class LeftView_
     @Override
     public void onViewChanged(HasViews hasViews) {
         {
-            View view = hasViews.findViewById(id.ties);
+            View view = hasViews.findViewById(id.more);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        LeftView_.this.enterMessage(view);
+                        LeftView_.this.enterMore(view);
                     }
 
                 }
@@ -98,14 +98,14 @@ public final class LeftView_
             }
         }
         {
-            View view = hasViews.findViewById(id.more);
+            View view = hasViews.findViewById(id.ties);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        LeftView_.this.enterMore(view);
+                        LeftView_.this.enterMessage(view);
                     }
 
                 }

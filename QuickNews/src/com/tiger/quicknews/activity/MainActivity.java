@@ -43,16 +43,31 @@ public class MainActivity extends BaseActivity {
     /** 自定义HorizontalScrollView */
     @ViewById(R.id.mColumnHorizontalScrollView)
     protected ColumnHorizontalScrollView mColumnHorizontalScrollView;
+    /**
+     * 头部滑动的选项LinearLayout
+     */
     @ViewById(R.id.mRadioGroup_content)
     protected LinearLayout mRadioGroup_content;
+    /**
+     * 添加更多的 + 图 的LinearLayout
+     */
     @ViewById(R.id.ll_more_columns)
     protected LinearLayout ll_more_columns;
+    /**
+     * 头部滑动的选项RelativeLayout
+     */
     @ViewById(R.id.rl_column)
     protected RelativeLayout rl_column;
+    /**
+     * 添加更多的 + 图 的ImageView
+     */
     @ViewById(R.id.button_more_columns)
     protected ImageView button_more_columns;
     @ViewById(R.id.mViewPager)
     protected ViewPager mViewPager;
+    /**
+     * 阴影
+     */
     @ViewById(R.id.shade_left)
     protected ImageView shade_left;
     @ViewById(R.id.shade_right)
@@ -100,6 +115,8 @@ public class MainActivity extends BaseActivity {
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
                 WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
+        //默认在Wi-Fi接入情况下才进行自动提醒。
+        UmengUpdateAgent.setUpdateOnlyWifi(false);
         UmengUpdateAgent.update(this);
         MobclickAgent.updateOnlineConfig(this);
         mScreenWidth = BaseTools.getWindowsWidth(this);

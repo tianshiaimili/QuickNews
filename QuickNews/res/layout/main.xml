@@ -12,7 +12,7 @@
         android:layout_height="40.0dip"
         android:background="#fff3f3f3"
         android:orientation="horizontal" >
-
+<!-- 这段是页头的hroizontalScrollView -->
         <RelativeLayout
             android:id="@+id/rl_column"
             android:layout_width="match_parent"

@@ -1,6 +1,8 @@
 
 package com.tiger.quicknews.wedget.discrollview;
 
+import com.tiger.quicknews.utils.LogUtils2;
+
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -43,6 +45,7 @@ public class DiscrollView extends ScrollView {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+        LogUtils2.i("onFinishInflate---------");
         if (getChildCount() != 1) {
             throw new IllegalStateException("Discrollview must host one child.");
         }

@@ -92,16 +92,16 @@ public final class WeatherActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
-        mWeatherImage = ((ImageView) hasViews.findViewById(id.weatherImage));
-        mLocal = ((TextView) hasViews.findViewById(id.local));
-        mWeatherTemp = ((TextView) hasViews.findViewById(id.weatherTemp));
+        mWeek = ((TextView) hasViews.findViewById(id.week));
         mTitle = ((TextView) hasViews.findViewById(id.title));
+        mLayout = ((RelativeLayout) hasViews.findViewById(id.layout));
+        mWeather = ((TextView) hasViews.findViewById(id.weather));
         mWeatherDate = ((TextView) hasViews.findViewById(id.weather_date));
         mWind = ((TextView) hasViews.findViewById(id.wind));
-        mLayout = ((RelativeLayout) hasViews.findViewById(id.layout));
-        mWeek = ((TextView) hasViews.findViewById(id.week));
-        mWeather = ((TextView) hasViews.findViewById(id.weather));
+        mLocal = ((TextView) hasViews.findViewById(id.local));
+        mWeatherTemp = ((TextView) hasViews.findViewById(id.weatherTemp));
+        mViewPager = ((ViewPager) hasViews.findViewById(id.vPager));
+        mWeatherImage = ((ImageView) hasViews.findViewById(id.weatherImage));
         {
             View view = hasViews.findViewById(id.local);
             if (view!= null) {
