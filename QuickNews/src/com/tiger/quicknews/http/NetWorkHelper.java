@@ -114,6 +114,7 @@ public class NetWorkHelper {
         boolean isWifiDataEnable = false;
         isWifiDataEnable = connectivityManager.getNetworkInfo(
                 ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+//        connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
         return isWifiDataEnable;
     }
 

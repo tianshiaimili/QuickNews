@@ -1,8 +1,6 @@
 
 package com.tiger.quicknews.activity;
-
 import android.widget.TextView;
-
 import com.tiger.quicknews.R;
 import com.tiger.quicknews.adapter.ImageAdapter;
 import com.tiger.quicknews.bean.NewDetailModle;
@@ -12,13 +10,11 @@ import com.tiger.quicknews.wedget.flipview.FlipView.OnFlipListener;
 import com.tiger.quicknews.wedget.flipview.FlipView.OnOverFlipListener;
 import com.tiger.quicknews.wedget.flipview.OverFlipMode;
 import com.umeng.analytics.MobclickAgent;
-
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
-
 import java.util.List;
 
 @EActivity(R.layout.activity_image)

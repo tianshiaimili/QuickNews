@@ -7,7 +7,11 @@ import android.util.Log;
 import org.apache.http.NameValuePair;
 
 import java.io.UnsupportedEncodingException;
-
+/**
+ * 网络连接判断等工具
+ * @author zero
+ *
+ */
 public class HttpUtil {
     // 网络连接部分
 

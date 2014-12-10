@@ -46,6 +46,7 @@ import java.util.List;
 
 /**
  * ListView subclass that provides the swipe functionality
+ * 作为页面内自定义的listview
  */
 public class SwipeListView extends ListView implements OnScrollListener {
 

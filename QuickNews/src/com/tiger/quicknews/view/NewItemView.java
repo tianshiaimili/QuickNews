@@ -1,6 +1,11 @@
 
 package com.tiger.quicknews.view;
 
+import java.util.List;
+
+import org.androidannotations.annotations.EViewGroup;
+import org.androidannotations.annotations.ViewById;
+
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,15 +15,9 @@ import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.tiger.quicknews.App;
 import com.tiger.quicknews.R;
 import com.tiger.quicknews.bean.NewModle;
 import com.tiger.quicknews.utils.Options;
-
-import org.androidannotations.annotations.EViewGroup;
-import org.androidannotations.annotations.ViewById;
-
-import java.util.List;
 
 @EViewGroup(R.layout.item_new)
 public class NewItemView extends LinearLayout {

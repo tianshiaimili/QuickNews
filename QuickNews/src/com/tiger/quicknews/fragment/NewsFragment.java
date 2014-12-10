@@ -21,6 +21,7 @@ import com.tiger.quicknews.http.HttpUtil;
 import com.tiger.quicknews.http.Url;
 import com.tiger.quicknews.http.json.NewListJson;
 import com.tiger.quicknews.initview.InitView;
+import com.tiger.quicknews.utils.LogUtils2;
 import com.tiger.quicknews.utils.StringUtils;
 import com.tiger.quicknews.wedget.slideingactivity.IntentUtils;
 import com.tiger.quicknews.wedget.swiptlistview.SwipeListView;
@@ -47,9 +48,15 @@ import java.util.List;
 @EFragment(R.layout.activity_main)
 public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener,
         OnSliderClickListener {
+	/**
+	 * 头部的横幅滑动布局
+	 */
     protected SliderLayout mDemoSlider;
     @ViewById(R.id.swipe_container)
     protected SwipeRefreshLayout swipeLayout;
+    /**
+     * 整个布局的listview
+     */
     @ViewById(R.id.listview)
     protected SwipeListView mListView;
     @ViewById(R.id.progressBar)
@@ -80,6 +87,8 @@ public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
     @AfterViews
     protected void initView() {
+    	LogUtils2.e("*******initView*************");
+    	LogUtils2.e("*******index*************== "+index);
         swipeLayout.setOnRefreshListener(this);
         InitView.instance().initSwipeRefreshLayout(swipeLayout);
         InitView.instance().initListView(mListView, getActivity());
@@ -147,7 +156,7 @@ public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnR
             mDemoSlider.addSlider(textSliderView);
         }
 
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.FlipHorizontal);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         newAdapter.appendList(newModles);
@@ -178,8 +187,10 @@ public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         bundle.putSerializable("newModle", newModle);
         Class<?> class1;
         if (newModle.getImagesModle() != null && newModle.getImagesModle().getImgList().size() > 1) {
-            class1 = ImageDetailActivity_.class;
+           LogUtils2.i("******** ImageDetailActivity_.class**********");
+        	class1 = ImageDetailActivity_.class;
         } else {
+        	  LogUtils2.i("******** DetailsActivity_.class**********");
             class1 = DetailsActivity_.class;
         }
         ((BaseActivity) getActivity()).openActivity(class1,
@@ -231,6 +242,7 @@ public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnR
     @Override
     public void onResume() {
         super.onResume();
+        LogUtils2.e("*******onResume*************");
         MobclickAgent.onPageStart("MainScreen"); // 统计页面
     }
 

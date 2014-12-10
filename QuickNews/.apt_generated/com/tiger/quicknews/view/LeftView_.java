@@ -83,36 +83,6 @@ public final class LeftView_
             }
         }
         {
-            View view = hasViews.findViewById(id.pics);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        LeftView_.this.enterPics(view);
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.ties);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        LeftView_.this.enterMessage(view);
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(id.video);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -136,6 +106,36 @@ public final class LeftView_
                     @Override
                     public void onClick(View view) {
                         LeftView_.this.enterTianQi(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.ties);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        LeftView_.this.enterMessage(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.pics);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        LeftView_.this.enterPics(view);
                     }
 
                 }

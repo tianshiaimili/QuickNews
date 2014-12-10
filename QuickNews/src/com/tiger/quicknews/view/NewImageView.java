@@ -1,6 +1,12 @@
 
 package com.tiger.quicknews.view;
 
+import java.util.List;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EViewGroup;
+import org.androidannotations.annotations.ViewById;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
@@ -14,18 +20,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener;
-import com.nostra13.universalimageloader.utils.ImageSizeUtils;
-import com.tiger.quicknews.App;
 import com.tiger.quicknews.R;
 import com.tiger.quicknews.utils.Options;
 import com.tiger.quicknews.wedget.ProgressButton;
-import com.tiger.quicknews.wedget.photoview.PhotoView;
-
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.EViewGroup;
-import org.androidannotations.annotations.ViewById;
-
-import java.util.List;
 
 @EViewGroup(R.layout.item_image)
 public class NewImageView extends RelativeLayout implements ImageLoadingListener,

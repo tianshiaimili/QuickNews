@@ -5,7 +5,10 @@ public class Url {
     public static final String host = "http://c.m.163.com/";
     public static final String endUrl = "-20.html";
     public static final String endDetailUrl = "/full.html";
-    // 头条
+    /**
+     *  头条
+     *  http://c.m.163.com/nc/article/headline/T1348647909107/2-20.html
+     */
     public static final String TopUrl = host + "nc/article/headline/";
     public static final String TopId = "T1348647909107";
     // 新闻详情

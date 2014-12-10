@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.tiger.quicknews.R;
 import com.tiger.quicknews.utils.LogUtils;
+import com.tiger.quicknews.utils.LogUtils2;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -135,8 +136,9 @@ public class CustomHttpClient {
                     R.string.httpError));
         }
         cookieStore = httpclient.getCookieStore();
-
-        return EntityUtils.toString(httpResponse.getEntity());
+        String content = EntityUtils.toString(httpResponse.getEntity());
+        LogUtils2.e("content=="+content);
+        return content;
 
     }
 

@@ -1,12 +1,18 @@
 
 package com.tiger.quicknews.activity;
 
+import org.androidannotations.annotations.AfterInject;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.UiThread;
+import org.androidannotations.annotations.ViewById;
+
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -22,19 +28,12 @@ import com.tiger.quicknews.bean.NewDetailModle;
 import com.tiger.quicknews.bean.NewModle;
 import com.tiger.quicknews.http.HttpUtil;
 import com.tiger.quicknews.http.json.NewDetailJson;
+import com.tiger.quicknews.utils.LogUtils2;
 import com.tiger.quicknews.utils.Options;
 import com.tiger.quicknews.utils.StringUtils;
 import com.tiger.quicknews.wedget.ProgressPieView;
 import com.tiger.quicknews.wedget.htmltextview.HtmlTextView;
 import com.umeng.analytics.MobclickAgent;
-
-import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Background;
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.UiThread;
-import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_details)
 public class DetailsActivity extends BaseActivity implements ImageLoadingListener,
@@ -162,6 +161,7 @@ public class DetailsActivity extends BaseActivity implements ImageLoadingListene
         try {
             Bundle bundle = new Bundle();
             bundle.putSerializable("newDetailModle", newDetailModle);
+            LogUtils2.e("newDetailModle.getUrl_mp4()==  "+newDetailModle.getUrl_mp4());
             if (!"".equals(newDetailModle.getUrl_mp4())) {
                 bundle.putString("playUrl", newDetailModle.getUrl_mp4());
                 openActivity(VideoPlayActivity_.class, bundle, 0);

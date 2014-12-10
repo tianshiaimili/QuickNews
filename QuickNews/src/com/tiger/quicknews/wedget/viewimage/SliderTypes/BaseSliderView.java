@@ -154,6 +154,10 @@ public abstract class BaseSliderView {
         return mErrorPlaceHolderRes;
     }
 
+    /**
+     * banner图片的简要介绍
+     * @return
+     */
     public String getDescription() {
         return mDescription;
     }
